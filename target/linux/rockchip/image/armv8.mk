@@ -2,6 +2,17 @@
 #
 # Copyright (C) 2020 Tobias Maedel
 
+define Device/roceos_k50s
+  DEVICE_VENDOR := ROCEOS
+  DEVICE_MODEL := K50S
+  SOC := rk3568
+  DEVICE_DTS := rockchip/rk3568-roc-k50s
+  UBOOT_DEVICE_NAME := generic-rk3568
+  IMAGE/sysupgrade.img.gz := boot-common | boot-script | pine64-img | gzip | append-metadata
+  DEVICE_PACKAGES := kmod-gpio-button-hotplug kmod-r8125 kmod-sata kmod-ata-ahci-dwc kmod-usb-net-rtl8152 kmod-brcmfmac brcmfmac-firmware-43430-sdio kmod-bluetooth urngd
+endef
+TARGET_DEVICES += roceos_k50s
+
 define Device/advantech_rsb4810
   DEVICE_VENDOR := Advantech
   DEVICE_MODEL := RSB4810
