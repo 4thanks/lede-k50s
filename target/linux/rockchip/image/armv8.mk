@@ -9,7 +9,7 @@ define Device/roceos_k50s
   DEVICE_DTS := rockchip/rk3568-roc-k50s
   UBOOT_DEVICE_NAME := generic-rk3568
   IMAGE/sysupgrade.img.gz := boot-common | boot-script | pine64-img | gzip | append-metadata
-  DEVICE_PACKAGES := kmod-drm-rockchip kmod-r8125-rss kmod-r8168 kmod-nvme kmod-ata-ahci-dwc kmod-thermal -urngd
+  DEVICE_PACKAGES := kmod-r8125-rss kmod-r8168 kmod-nvme kmod-ata-ahci-dwc kmod-thermal
 endef
 TARGET_DEVICES += roceos_k50s
 
