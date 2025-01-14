@@ -7,8 +7,8 @@ preinit_reorder_eth() {
 		ip link set eth0 name lan1
 		ip link set eth1 name lan2
 		ip link set eth2 name lan3
-		ip link set eth3 name wan
-		ip link set eth4 name wan2
+		ip link set eth3 name lan4
+		ip link set eth4 name wan
 		;;
 	esac
 }
